@@ -4,6 +4,7 @@ pipeline {
         AWS_DOCKER_REGISTRY = '913529219453.dkr.ecr.us-east-1.amazonaws.com'
         APP_NAME = 'tech2102-project'
         AWS_DEFAULT_REGION = 'us-east-2'
+        DOCKER_API_VERSION = '1.44'
     }
 
     stages {
