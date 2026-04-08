@@ -1,0 +1,27 @@
+{
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "family": "tech2102-project-task",
+    "containerDefinitions": [
+        {
+            "name": "project-react",
+            "image": "913529219453.dkr.ecr.us-east-1.amazonaws.com/tech2102-project:latest",
+            "portMappings": [
+                {
+                    "name": "ngnix-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true
+        }
+    ],
+    "volumes": [],
+    "networkMode": "awsvpc",
+    "memory": "512",
+    "cpu": "256",
+    "executionRoleArn": "arn:aws:iam::913529219453:role/ecsTaskExecutionRole"
+}
